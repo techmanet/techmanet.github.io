@@ -16,7 +16,7 @@ html, body {
   touch-action: none;
 }
 
-.noscroll {overflow: hidden;}
+.noscroll {overflow: smooth;}
 
 #home{background-color: #84b595;}
 
@@ -548,4 +548,5 @@ footer{
   margin-bottom: 10%;
   padding: 5%;
 }
+
 }
