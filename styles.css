@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: smooth;
     cursor: url('./Img/cursorcolor.png'), auto;
      text-decoration: none;
      scrollbar-color: #41822d #ffffff00;
@@ -16,7 +15,7 @@ html, body {
 }
 
 .noscroll{
-overflow-y: hidden;
+overflow: hidden;
 }
 
 #home{background-color: #84b595;}
@@ -43,6 +42,8 @@ header{
     display: flex;
     z-index: 10;
     background-color: #ecf3e7;
+    padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
 }
 
 h1{
@@ -111,6 +112,8 @@ h1{
     display: flex;
     margin-top: 1%;
     z-index: 1000;
+    top: calc(constant(safe-area-inset-top) + 2%);
+    top: calc(env(safe-area-inset-top) + 2%);
 }
 
 .navbar-top{
