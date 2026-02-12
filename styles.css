@@ -16,6 +16,9 @@ html, body {
   font-style: normal;
 }
 
+.noscrol{
+overflow: hidden;
+}
 
 #home{background-color: #84b595;}
 
