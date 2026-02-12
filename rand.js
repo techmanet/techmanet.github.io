@@ -1,6 +1,6 @@
 function randVideo() {
     // Generate random number
-    var number = Math.floor(Math.random() * 5) + 1;
+    var number = Math.floor(Math.random() * 6) + 1;
     var mySrc = "./Img/Video/" + number + ".mp4";
 
     // Get container
