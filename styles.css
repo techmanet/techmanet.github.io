@@ -112,7 +112,7 @@ h1{
     display: flex;
     margin-top: 1%;
     z-index: 1000;
-    top: calc(constant(safe-area-inset-top) + 2%);
+    top: calc(constant(safe-area-inset-top) + 1%);
     top: calc(env(safe-area-inset-top) + 2%);
 }
 
