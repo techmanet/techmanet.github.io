@@ -3,6 +3,8 @@ let rotX = 0; // Rotation around the X-axis
 let rotY = 0; // Rotation around the Y-axis
 let textureImg;
 
+// Disable p5.js friendly errors to avoid beforeunload warnings on mobile
+p5.disableFriendlyErrors = true;
 
 function preload() { 
   obj = loadModel('./models/techlogo.obj', true);
@@ -46,8 +48,6 @@ function draw() {
   let isMobileDevice = regexp.test(details);
 
   if (isMobileDevice) {
-
-    lockGestures();
 
       rotateX(-rotationX/2);
       rotateY(-rotationY);
@@ -98,7 +98,11 @@ function draw() {
 }*/
 
 function touchMoved() {
-  return false;  // tells browser "do NOT scroll"
+  // Only prevent default on canvas, allow normal behavior elsewhere
+  if (mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= height) {
+    return false;  // Block touch on canvas
+  }
+  return true;  // Allow touch elsewhere
 }
 
 function windowResized() {
