@@ -40,9 +40,6 @@ header{
     display: flex;
     z-index: 10;
     background-color: #ecf3e7;
-  /* Respect device safe area (notch/status bar) on mobile */
-  padding-top: constant(safe-area-inset-top);
-  padding-top: env(safe-area-inset-top);
 }
 
 h1{
@@ -491,13 +488,6 @@ footer{
   *{
    scrollbar-width: none;
   }
-
-  .nav-top{
-    /* place below the status bar / notch on mobile devices */
-    top: calc(constant(safe-area-inset-top) + 1%);
-    top: calc(env(safe-area-inset-top) + 2%);
-}
-
   .grid{
     display: grid;
     grid-template-columns: 1fr;
