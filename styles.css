@@ -14,9 +14,7 @@ html, body {
   font-style: normal;
 }
 
-.noscroll{
-overflow: hidden;
-}
+.noscroll {overflow: hidden;}
 
 #home{background-color: #84b595;}
 
@@ -42,7 +40,8 @@ header{
     display: flex;
     z-index: 10;
     background-color: #ecf3e7;
-    padding-top: constant(safe-area-inset-top);
+  /* Respect device safe area (notch/status bar) on mobile */
+  padding-top: constant(safe-area-inset-top);
   padding-top: env(safe-area-inset-top);
 }
 
@@ -110,10 +109,10 @@ h1{
     width: 100vw;
     position: fixed;
     display: flex;
-    margin-top: 1%;
-    z-index: 1000;
-    top: calc(constant(safe-area-inset-top) + 2%);
+    /* place below the status bar / notch on mobile devices */
+    top: calc(constant(safe-area-inset-top) + 1%);
     top: calc(env(safe-area-inset-top) + 2%);
+    z-index: 1000;
 }
 
 .navbar-top{
@@ -487,9 +486,7 @@ footer{
     padding-right: 5%;
   }
 
-  .about-cont{
-  padding-bottom: 2%;
-}
+  
   
 }
 
@@ -552,5 +549,4 @@ footer{
   margin-bottom: 10%;
   padding: 5%;
 }
-
 }
