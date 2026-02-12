@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/p5.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/addons/p5.sound.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5-phone@1.6.4/dist/p5-phone.min.js"></script>
+    <script src="loader.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Lexend+Deca:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Voltaire&display=swap" rel="stylesheet">
+    <title>Tech Manèt</title>
+</head>
+<body class="noscroll" id="home">
+    <header>
+    <div class="scrolling-text">
+    <h1>Tech Manèt è un collettivo artistico che unisce laboriose entità multidimensionali per dare vita a contenuti digitali di natura fluida.</h1>
+    <h1>Tech Manèt è un collettivo artistico che unisce laboriose entità multidimensionali per dare vita a contenuti digitali di natura fluida.</h1>
+    <h1>Tech Manèt è un collettivo artistico che unisce laboriose entità multidimensionali per dare vita a contenuti digitali di natura fluida.</h1>
+</div>
+    </header>
+
+    <canvas><script src="3dlogo.js" defer></script></canvas>
+
+    <div class="nav-cont">
+    <div class="navbar">
+            <a href="index.html"><img id="navlogo" src="./Img/techmanettext.png"></a>
+            <div class="buttons"><button class="frutiger-button">
+                <div class="inner">
+                    <div class="top-white"></div>
+                    <a href="about.html" class="text">About</a>
+                </div>
+            </button>
+            <button class="frutiger-button">
+                <div class="inner">
+                    <div class="top-white"></div>
+                    <a href="works.html" class="text">Works</a>
+                </div>
+            </button>
+            <button class="frutiger-button">
+                <div class="inner">
+                    <div class="top-white"></div>
+                    <a href="popi.html" class="text" id="blankspace">----<img src="./Img/TechManetCOLOR.png" href="popi.html">----</a>
+                </div>
+            </button>
+            </div>
+    </div>
+    </div>
+    
+    
+
+    <footer><a class="instagram" href ="https://www.instagram.com/techmanet/" target="_blank"><img src="./Img/ig_logo.png"></div> <div class=contact><a class="mail" href="mailto:collettivo.techmanet@gmail.com" target="_blank">collettivo.techmanet@gmail.com</a></div></footer>
+
+    <div class="loader"><img src="./Img/loader.gif"></div>
+
+
+</body>
+
+
+<script>
+    const trigger = document.querySelector('#navlogo');
+
+trigger.addEventListener('mouseenter', () => {
+  document.body.style.filter = 'invert(1)';
+});
+
+trigger.addEventListener('mouseleave', () => {
+  document.body.style.filter = 'invert(0)';
+});
+</script>
+</html>

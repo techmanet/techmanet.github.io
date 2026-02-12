@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    cursor: url('./Img/cursorcolor.png'), auto;
+     text-decoration: none;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+ .noscroll {
+     overflow: hidden;
+ }
+
+
+
+
+
+
+
+.nav-top{
+  justify-content: center;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    z-index: 10;
+    top: 2%;
+}
+
+.navbar-top{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   overflow: hidden;
+   z-index: 5;
+}
+
+
+
+#navlogo-top{
+  max-height: 100px;
+  object-fit: fill;
+}
+
+
+
+.buttons-top{
+  display : flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.frutiger-button:hover{
+  filter: hue-rotate(-45deg) saturate(300%);
+}
+
+.frutiger-button {
+  position: relative;
+  padding: 1px;
+  border-radius: 20px;
+  border: 0;
+  text-shadow: 0px 0px 3 rgb(255, 255, 255);
+  background: linear-gradient(#00aa03, #00ff91);
+  transition: 0.3s all;
+}
+
+
+
+.inner {
+  position: relative;
+  padding: 1em;
+  border-radius: 20px;
+  background: radial-gradient(circle at 50% 100%, #30f8b2 10%, #30f8f800 55%),
+    linear-gradient(#006a3a, #0acd00);
+  overflow: hidden;
+  transition: inherit;
+}
+
+.inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-65deg, #0000 40%, #fff7 50%, #0000 70%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: thing 3s ease infinite;
+}
+
+@keyframes thing {
+  0% {
+    background-position: 130%;
+    opacity: 1;
+  }
+
+  to {
+    background-position: -166%;
+    opacity: 0;
+  }
+}
+
+.top-white {
+  position: absolute;
+  border-radius: inherit;
+  inset: 0 -8em;
+  background: radial-gradient(
+    circle at 50% -270%,
+    #fff 45%,
+    #fff6 60%,
+    #fff0 60%
+  );
+  transition: inherit;
+}
+
+.inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transition: inherit;
+  box-shadow: inset 0px 5px 20px -5px #ffffff97;
+}
+
+.frutiger-button:active .inner::after {
+  box-shadow: inset 0px 5px 20px -5px rgb(255, 255, 255);
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-weight: 550;
+  transition: inherit;
+  display: flex;
+  align-items: center;
+}
+
+#blankspace{
+  color: #00000000;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+}
+
+
+
+.text img{
+  position: fixed;
+  max-width: 30px; 
+  max-height: 30px;
+  filter: drop-shadow(1px 0 0 white) 
+  drop-shadow(0 1px 0 white)
+  drop-shadow(-1px 0 0 white) 
+  drop-shadow(0 -1px 0 white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+  min-width: 100vw;
+  height: 3vh;
+  background-color: #ecf3e7;
+  
+  position: absolute;
+  bottom: 0%;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.instagram{
+  position: relative;
+  
+}
+
+.instagram img {
+
+  max-width: 100%; 
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.contact
+{
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: .6%;
+}
+
+.mail{
+  max-width: 100%;
+  position: relative;
+  color: #41822d;
+  font-size: 0.7rem;
+}
+
+@media (width < 1024px) {
+  .buttons{
+    width: 90%;
+  }
+
+  .nav-top{
+    top: 5%;
+  }
+
+  
+
+  header, footer{
+    height: 10vh;
+  }
+
+  .contact , .instagram{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+}
