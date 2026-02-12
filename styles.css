@@ -109,9 +109,6 @@ h1{
     width: 100vw;
     position: fixed;
     display: flex;
-    /* place below the status bar / notch on mobile devices */
-    top: calc(constant(safe-area-inset-top) + 1%);
-    top: calc(env(safe-area-inset-top) + 2%);
     z-index: 1000;
 }
 
@@ -494,6 +491,13 @@ footer{
   *{
    scrollbar-width: none;
   }
+
+  .nav-top{
+    /* place below the status bar / notch on mobile devices */
+    top: calc(constant(safe-area-inset-top) + 1%);
+    top: calc(env(safe-area-inset-top) + 2%);
+}
+
   .grid{
     display: grid;
     grid-template-columns: 1fr;
