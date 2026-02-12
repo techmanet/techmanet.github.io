@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     cursor: url('./Img/cursorcolor.png'), auto;
      text-decoration: none;
      scrollbar-color: #41822d #ffffff00;
@@ -16,7 +17,6 @@ html, body {
   touch-action: none;
 }
 
-.noscroll {overflow: smooth;}
 
 #home{background-color: #84b595;}
 
