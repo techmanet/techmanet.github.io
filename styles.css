@@ -14,7 +14,9 @@ html, body {
   font-style: normal;
 }
 
-.noscroll {overflow: hidden;}
+.noscroll{
+overflow: hidden;
+}
 
 #home{background-color: #84b595;}
 
@@ -40,6 +42,8 @@ header{
     display: flex;
     z-index: 10;
     background-color: #ecf3e7;
+    padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
 }
 
 h1{
@@ -106,7 +110,10 @@ h1{
     width: 100vw;
     position: fixed;
     display: flex;
+    margin-top: 1%;
     z-index: 1000;
+    top: calc(constant(safe-area-inset-top) + 2%);
+    top: calc(env(safe-area-inset-top) + 2%);
 }
 
 .navbar-top{
@@ -480,7 +487,9 @@ footer{
     padding-right: 5%;
   }
 
-  
+  .about-cont{
+  padding-bottom: 2%;
+}
   
 }
 
@@ -543,4 +552,5 @@ footer{
   margin-bottom: 10%;
   padding: 5%;
 }
+
 }
