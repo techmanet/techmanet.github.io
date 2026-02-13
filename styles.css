@@ -477,6 +477,14 @@ footer{
   padding-left: 2%;
   }
 
+  .work-item{
+   margin-bottom: 25%;
+  }
+
+  .work-title{
+    margin-bottom: 2.5%;
+  }
+
   header, footer{
     height: 5vh;
   }
