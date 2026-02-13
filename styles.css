@@ -73,7 +73,7 @@ h1{
 .nav-cont{
   justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100dvh;
     display: flex;
 }
 
@@ -481,8 +481,11 @@ footer{
     height: 5vh;
   }
 
-  .contact , .instagram{
+  .instagram{
     padding-left: 5%;
+  }
+
+  .contact{
     padding-right: 5%;
   }
 
@@ -550,6 +553,10 @@ footer{
 .bio-section{
   margin-bottom: 10%;
   padding: 5%;
+}
+
+#home footer{
+  bottom: 75%;
 }
 
 }
