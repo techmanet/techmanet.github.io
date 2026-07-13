@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-snap-type: y proximity;
     cursor: url('./Img/cursor2.png'), auto;
      text-decoration: none;
      scrollbar-color: #ffffff00 #ffffff00;
@@ -33,26 +32,14 @@ html, body {
 
 }
 
-
-
+.scroll{
+  overflow-y: scroll;
+}
 
 .noscroll {overflow: hidden;}
 
-#home{background-color: #84b595;}
-
 #works{background-color: #ecf3e7;}
 
-
-
-canvas{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  
-}
 
 header{
     justify-content: center;
@@ -73,11 +60,6 @@ h1{
   animation: my-animation 30s linear infinite;
 }
 
-.scrolling-text {
-  display: flex;
-  gap: 1rem;
-}
-
 @keyframes my-animation {
   from {
     transform: translateX(0%);
@@ -93,17 +75,6 @@ h1{
     align-items: center;
     min-height: 100vh;
     display: flex;
-}
-
-.navbar{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   position: relative;
-   overflow: hidden;
-   padding: 1rem;
-   z-index: 5;
 }
 
 
@@ -255,7 +226,7 @@ h1{
 }
 
 
-.works-cont, .about-cont{
+.about-cont{
   width: 100vw;
   height: auto;
   display: flex;
@@ -274,10 +245,6 @@ padding-top: 8%;
  margin-bottom: 5%;
 }
 
-.work-item{
-  width: 100%;
-  margin-bottom: 10%;
-}
 
 .team-section-title{
   width: 100vw;
@@ -372,57 +339,6 @@ h5{
   hyphens: none;
   font-family: 'terminal_grotesque', sans-serif;
 }
-
-
-.grid{
-  display: grid; height: 70vh; width: 100%; grid-template-columns: repeat(10, 1fr); grid-template-rows: auto; gap: 16px;  padding: 8px;
-}
-
-.grid-box-title{
-  grid-column: span 2; grid-row: span 4; display: flex; align-items: end; justify-content: right; text-align: justify; text-justify: inter-word; padding: 8px; hyphens: auto; color: #41822d;
-}
-
-.grid-box{
-  background-color: lightGray; border: 2px solid #41822d; border-radius:30px; box-shadow: 0px 0px 30px 10px rgba(0, 255, 149, 0.562) inset; display: flex; align-items: center; justify-content: center;
-  background-size: cover;
-  background-position: center
-}
-
-#img-1{
-  grid-column: span 3; grid-row: span 6;
-}
-
-#img-2{
-  grid-column: span 5; grid-row: span 10;
-}
-
-#img-3{
-  grid-column: span 2; grid-row: span 6;
-}
-
-#img-4{
-  grid-column: span 3; grid-row: span 4;
-}
-
-#lightroomGen26 #img-1{background-image: url('./Img/works/Lightroom 10 Gen 26/1.jpg');}
-#lightroomGen26 #img-2{background-image: url('./Img/works/Lightroom 10 Gen 26/2.jpg');}
-#lightroomGen26 #img-3{background-image: url('./Img/works/Lightroom 10 Gen 26/4.jpg');}
-#lightroomGen26 #img-4{background-image: url('./Img/works/Lightroom 10 Gen 26/3.jpg');}
-
-#dungeonGen26 #img-1{ background-image: url('./Img/works/Dungeon 10 Gen 26/1.jpg');}
-#dungeonGen26 #img-2{background-image: url('./Img/works/Dungeon 10 Gen 26/3.jpg');}
-#dungeonGen26 #img-3{background-image: url('./Img/works/Dungeon 10 Gen 26/2.jpg');}
-#dungeonGen26 #img-4{background-image: url('./Img/works/Dungeon 10 Gen 26/5.jpg');}
-
-#dungeonNov25 #img-1{ background-image: url('./Img/works/Dungeon 7 Nov 25/1.jpg');}
-#dungeonNov25 #img-2{background-image: url('./Img/works/Dungeon 7 Nov 25/2.jpg');}
-#dungeonNov25 #img-3{background-image: url('./Img/works/Dungeon 7 Nov 25/3.jpg');}
-#dungeonNov25 #img-4{background-image: url('./Img/works/Dungeon 7 Nov 25/4.jpg');}
-
-#liberalafesta25 #img-1{ background-image: url('./Img/works/Libera 2025/2.jpg');}
-#liberalafesta25 #img-2{background-image: url('./Img/works/Libera 2025/3.jpg');}
-#liberalafesta25 #img-3{background-image: url('./Img/works/Libera 2025/5.jpg');}
-#liberalafesta25 #img-4{background-image: url('./Img/works/Libera 2025/6.jpg');}
 
 .proj-item {
   position: relative;
