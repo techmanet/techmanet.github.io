@@ -2,21 +2,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url('./Img/cursorcolor.png'), auto;
+    scroll-snap-type: y proximity;
+    cursor: url('./Img/cursor2.png'), auto;
      text-decoration: none;
-     scrollbar-color: #41822d #ffffff00;
+     scrollbar-color: #ffffff00 #ffffff00;
 }
 
 html, body {
-  font-family: "Lexend Deca", sans-serif;
+  font-family: "CothamSans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  touch-action: none;
+  
 }
 
-.noscroll{
-overflow: hidden;
+@font-face {
+    font-family: 'office_code_proregular';
+    src: url('officecodepro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'terminal_grotesque';
+    src: url('terminal-grotesque-webfont.woff') format('woff');
+    font-weight: 10;
+    font-style: normal;
+
+
+}
+
+
+
+
+.noscroll {overflow: hidden;}
 
 #home{background-color: #84b595;}
 
@@ -42,8 +62,6 @@ header{
     display: flex;
     z-index: 10;
     background-color: #ecf3e7;
-    padding-top: constant(safe-area-inset-top);
-  padding-top: env(safe-area-inset-top);
 }
 
 h1{
@@ -73,7 +91,7 @@ h1{
 .nav-cont{
   justify-content: center;
     align-items: center;
-    height: 100dvh;
+    min-height: 100vh;
     display: flex;
 }
 
@@ -110,9 +128,8 @@ h1{
     width: 100vw;
     position: fixed;
     display: flex;
+    margin-top: 1%;
     z-index: 1000;
-    top: calc(constant(safe-area-inset-top) + 1%);
-    top: calc(env(safe-area-inset-top) + 2%);
 }
 
 .navbar-top{
@@ -249,6 +266,7 @@ h1{
   padding-left: 2%;
   padding-right: 2%;
   margin-bottom: 10%;
+  
 }
 
 .about-cont{
@@ -330,9 +348,31 @@ h3{
   color: #41822d;
   display: block;
   text-align: justify;
-  text-justify: inter-word;
   hyphens: auto;
 }
+
+h4 , span{
+  all: unset;
+  font-size: clamp(1rem, 1.286rem + -0.762vw, 0.6rem);
+  color: #fff;
+  display: block;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: none;
+  font-family: 'terminal_grotesque', sans-serif;
+}
+
+h5{
+  all: unset;
+  font-size: clamp(1rem, 1.286rem + -0.762vw, 0.6rem);
+  color: #fff;
+  display: block;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: none;
+  font-family: 'terminal_grotesque', sans-serif;
+}
+
 
 .grid{
   display: grid; height: 70vh; width: 100%; grid-template-columns: repeat(10, 1fr); grid-template-rows: auto; gap: 16px;  padding: 8px;
@@ -383,6 +423,96 @@ h3{
 #liberalafesta25 #img-2{background-image: url('./Img/works/Libera 2025/3.jpg');}
 #liberalafesta25 #img-3{background-image: url('./Img/works/Libera 2025/5.jpg');}
 #liberalafesta25 #img-4{background-image: url('./Img/works/Libera 2025/6.jpg');}
+
+.proj-item {
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+  min-width: 100vw;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.proj-link{
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+.proj-vid,
+.proj-vid-vert{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.proj-vid{
+  display: block;
+}
+.proj-vid-vert{
+  display: none;
+}
+
+@media (orientation: portrait) {
+  .proj-vid{
+    display: none;
+  }
+  .proj-vid-vert{
+    display: block;
+  }
+}
+
+@media (orientation: landscape) {
+  .proj-vid{
+    display: block;
+  }
+  .proj-vid-vert{
+    display: none;
+  }
+}
+
+.proj-bio{
+  width: 350px;
+  max-width: 90%;
+  margin: auto 0;
+  text-align: justify;
+}
+
+.proj-bio-text{
+   background-image: linear-gradient(#00aa03, #00aa03);
+
+   display: inline;
+  
+  /* Fits the background vertically to the text height */
+  background-size: 100%; 
+  padding: 0 0% 0% 2.5%;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+
+
+.proj-title-cont{
+  display: flex;
+  align-items: center;
+  align-self: center;
+  padding: .25%;
+  background-color:  #00aa03;
+}
+
+.proj-title{
+  text-align: center;
+}
+
+.proj-title-vert{
+  display: none;
+  text-align: center;
+}
+
+
 
 footer{
   min-width: 100vw;
@@ -472,28 +602,18 @@ footer{
     
   }
 
+
   .works-cont, .about-cont{
   padding-top: 50%;
   padding-left: 2%;
-  }
-
-  .work-item{
-   margin-bottom: 25%;
-  }
-
-  .work-title{
-    margin-bottom: 2.5%;
   }
 
   header, footer{
     height: 5vh;
   }
 
-  .instagram{
+  .contact , .instagram{
     padding-left: 5%;
-  }
-
-  .contact{
     padding-right: 5%;
   }
 
@@ -563,8 +683,26 @@ footer{
   padding: 5%;
 }
 
-#home footer{
-  bottom: 75%;
+.proj-bio{
+  width: 75%;
 }
+
+.proj-title-cont{
+  width:100%;
+  align-items: center;
+}
+
+.proj-title{
+  display: none;
+}
+
+.proj-title-vert{
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+
+
 
 }
