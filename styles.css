@@ -308,6 +308,16 @@ h2{
   font-size: clamp(1.5625rem, 1.2931rem + 0.8621vw, 1.875rem);
 }
 
+.caption{
+  padding: 2%;
+  position: absolute;
+  bottom: 0;
+  color: #41822d;
+  text-justify: inter-word;
+  hyphens: none;
+  font-size: clamp(3rem, 1.0313rem + 8.75vw, 7.8125rem);
+}
+
 h3{
   all: unset;
   font-size: clamp(1rem, 1.286rem + -0.762vw, 0.6rem);
