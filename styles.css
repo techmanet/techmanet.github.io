@@ -7,8 +7,17 @@
      scrollbar-color: #ffffff00 #ffffff00;
 }
 
+@font-face {
+    font-family: 'CothamSanz';
+    src: url('CothamSanz.woff') format('woff')
+         url('CothamSanz.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 html, body {
-  font-family: "CothamSans", sans-serif;
+  font-family: "CothamSanz", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
