@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'CothamSanz';
-    src: url('CothamSanz.woff') format('woff')
+    src: url('CothamSanz.woff') format('woff'),
          url('CothamSanz.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
